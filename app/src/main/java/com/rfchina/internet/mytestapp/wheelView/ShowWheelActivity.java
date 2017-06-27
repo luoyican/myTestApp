@@ -26,7 +26,6 @@ public class ShowWheelActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int i = 0x20;
         setContentView(R.layout.activity_wheel_show);
     }
 
