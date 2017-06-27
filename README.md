@@ -1,4 +1,5 @@
 声明：这是个人平时遇到的一些技术点的测试app.
+
 测试技术点：
 1.自定义带圆角控件vs google自带的CardView
 2.activity的启动模式singleTask 与FLAG_INTENT_...的区别
