@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_01">#00000001</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <color name="black_33_transparent">#ee000000</color>
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 绿色 -->
+    <color name="green">#00FF00</color>
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+
+    <!-- 主题色 -->
+    <color name="app_blue">#41a3ff</color>
+
+    <!-- 背景灰 -->
+    <color name="app_backhround_gray">#f0f1f5</color>
+
+    <!-- 灰色 -->
+    <color name="gray_line">#dde0da</color>
+    <color name="gray_33_transparent">#ee333333</color>
+    <color name="gray_00_transparent">#77000000</color>
+    <color name="gray_99_transparent">#99000000</color>
+    <color name="gray_33">#333333</color>
+    <color name="gray_41">#414141</color>
+    <color name="gray_99">#999999</color>
+    <color name="gray_77">#777777</color>
+    <color name="gray_ec">#ecedf2</color>
+    <color name="gray_a1">#a1a7bf</color>
+
+    <!-- 蓝色 -->
+    <color name="app_blue_darken">#0174ac</color>
+    <color name="blue_highlight">#41a3ff</color>
+
+    <!-- 红色 -->
+    <color name="red_error_tip">#bf1b45</color>
+    <color name="red_message_tip">#ff2f47</color>
+
+    <!-- 黑色 -->
+    <color name="black_33_transparent_77">#33000000</color>
+
+    <!-- 白色 -->
+    <color name="white_transparent_11">#11ffffff</color>
+    <color name="white_transparent_33">#33ffffff</color>
+    <color name="white_transparent_88">#88ffffff</color>
+    <color name="white_transparent_dd">#ddFFFFFF</color>
+    <color name="white_transparent_ee">#eeFFFFFF</color>
+    <color name="text_bg_white_1">#d5f1ff</color>
+    <color name="text_bg_white_1_trans">#ccd5f1ff</color>
+
+    <color name="text_blue_outside_trans">#cccee2f5</color>
+    <color name="text_blue_input">#a8d2fa</color>
+    <color name="text_blue_outside">#cee2f5</color>
+    <color name="gray_text_title">#c8c8c8</color>
+    <color name="gray_text_content">#646464</color>
+    <color name="gray_text_ed">#ededf2</color>
+    <color name="gray_text_a1">#a1a7bf</color>
+
+    <color name="photopicker_background">#181819</color>
+</resources>
