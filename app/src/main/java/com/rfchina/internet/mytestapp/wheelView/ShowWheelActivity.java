@@ -7,9 +7,9 @@ import android.util.Log;
 import android.view.View;
 
 import com.rfchina.internet.mytestapp.R;
-import com.rfchina.internet.wheelviewsdk.wheelview.entry.Contacts;
-import com.rfchina.internet.wheelviewsdk.wheelview.entry.OnWheelChoosedValueListener;
-import com.rfchina.internet.wheelviewsdk.wheelview.entry.DatePickerDialog;
+import com.rfchina.internet.wheelviewsdk.datepicker.entry.Contacts;
+import com.rfchina.internet.wheelviewsdk.datepicker.entry.OnWheelChoosedValueListener;
+import com.rfchina.internet.wheelviewsdk.datepicker.entry.DatePickerDialog;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
