@@ -52,6 +52,7 @@ public class DatePickerDialog {
     private Date curDate;
     private int mod;
     private String btnColor;
+    private String format;
 
     /**
      * 初始化
@@ -129,12 +130,12 @@ public class DatePickerDialog {
         setWheelVisibility(wheelHour, isShowHour);
         setWheelVisibility(wheelMinute, isShowMinute);
         setWheelVisibility(wheelSecond, isShowSecond);
-        initDatePicker(mContext, wheelYear, maxCalendar.get(Calendar.YEAR), minCalendar.get(Calendar.YEAR), curYear, labelYear, TYPE_YEAR);
-        initDatePicker(mContext, wheelMonth, MAX_MONTH, MIN_MONTH, curMonth, labelMonth, TYPE_MONTH);
-        initDatePicker(mContext, wheelDay, getMonthDays(curYear, curMonth), MIN_DAY, curDay, labelDay, TYPE_DAY);
-        initDatePicker(mContext, wheelHour, MAX_HOUR, MIN_HOUR, curHour, labelHour, TYPE_HOUR);
-        initDatePicker(mContext, wheelMinute, MAX_MINUTE, MIN_MINUTE, curMinute, labelMinute, TYPE_MINUTE);
-        initDatePicker(mContext, wheelSecond, MAX_SECOND, MIN_SECOND, curSecond, labelSecond, TYPE_SECOND);
+        initDatePicker(mContext, wheelYear, maxCalendar.get(Calendar.YEAR), minCalendar.get(Calendar.YEAR), curYear, labelYear,format, TYPE_YEAR);
+        initDatePicker(mContext, wheelMonth, MAX_MONTH, MIN_MONTH, curMonth, labelMonth, format,TYPE_MONTH);
+        initDatePicker(mContext, wheelDay, getMonthDays(curYear, curMonth), MIN_DAY, curDay, labelDay, format,TYPE_DAY);
+        initDatePicker(mContext, wheelHour, MAX_HOUR, MIN_HOUR, curHour, labelHour, format,TYPE_HOUR);
+        initDatePicker(mContext, wheelMinute, MAX_MINUTE, MIN_MINUTE, curMinute, labelMinute, format,TYPE_MINUTE);
+        initDatePicker(mContext, wheelSecond, MAX_SECOND, MIN_SECOND, curSecond, labelSecond, format,TYPE_SECOND);
         txtCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,9 +169,9 @@ public class DatePickerDialog {
     /**
      * 初始化时间滚轮
      */
-    private void initDatePicker(final Context context, WheelView wheel, int maxValue, final int minValue, int curValue, String label, final int type) {
+    private void initDatePicker(final Context context, WheelView wheel, int maxValue, final int minValue, int curValue, String label, String format,final int type) {
         wheel.setDrawShadows(true);
-        NumericWheelAdapter numericWheelAdapter1 = new NumericWheelAdapter(context, minValue, maxValue);
+        NumericWheelAdapter numericWheelAdapter1 = new NumericWheelAdapter(context, minValue, maxValue,format);
         numericWheelAdapter1.setLabel(label);
         wheel.setViewAdapter(numericWheelAdapter1);
         wheel.setCyclic(isCyclic);//是否可循环滑动
@@ -245,7 +246,7 @@ public class DatePickerDialog {
      */
     private void reloadWheelDay(Context context) {
         curDay = curDay > getMonthDays(curYear, curMonth) ? getMonthDays(curYear, curMonth) : curDay;
-        initDatePicker(context, wheelDay, getMonthDays(curYear, curMonth), 1, curDay, labelDay, TYPE_DAY);
+        initDatePicker(context, wheelDay, getMonthDays(curYear, curMonth), 1, curDay, labelDay, format,TYPE_DAY);
     }
 
     /**
@@ -303,6 +304,7 @@ public class DatePickerDialog {
         private Date curDate= new Date();
         private int mod;
         private String btnColor = "#41a3ff";
+        private String format;
 
 
         public Builder(Context context) {
@@ -354,6 +356,11 @@ public class DatePickerDialog {
             return this;
         }
 
+        public Builder setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+
         public DatePickerDialog build() {
             return new DatePickerDialog(this);
         }
@@ -370,6 +377,7 @@ public class DatePickerDialog {
         curDate = builder.curDate;
         mod = builder.mod;
         btnColor = builder.btnColor;
+        format = builder.format;
         initData();
     }
 }

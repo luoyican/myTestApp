@@ -83,6 +83,7 @@ public class ShowWheelActivity extends Activity {
                         .setCyclic(true)
                         .setShowLabel(false)
                         .setBtnColor("#ff6060")
+                        .setFormat("%02d")
                         .build();
             } else
                 new DatePickerDialog.Builder(this)
