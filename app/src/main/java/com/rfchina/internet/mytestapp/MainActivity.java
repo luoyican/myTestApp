@@ -9,9 +9,10 @@ import android.widget.TextView;
 import com.rfchina.internet.mytestapp.activitystartmodel.FirstActivity;
 import com.rfchina.internet.mytestapp.cornerlayout.CornerActivity;
 import com.rfchina.internet.mytestapp.wheelView.ShowWheelActivity;
+import com.rfchina.internet.mytestapp.xfermode.XfermodeActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    private TextView txtCorner, txtStartMondel, txtWheelView;
+    private TextView txtCorner, txtStartMondel, txtWheelView,txtXfermode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         txtCorner = (TextView) findViewById(R.id.txtCorner);
         txtStartMondel = (TextView) findViewById(R.id.txtStartMondel);
         txtWheelView = (TextView) findViewById(R.id.txtWheelView);
+        txtXfermode = (TextView) findViewById(R.id.txtXfermode);
 
 
         txtCorner.setOnClickListener(this);
         txtStartMondel.setOnClickListener(this);
         txtWheelView.setOnClickListener(this);
+        txtXfermode.setOnClickListener(this);
 
     }
 
@@ -42,6 +45,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.txtWheelView:
                 startActivity(new Intent(this, ShowWheelActivity.class));
                 break;
+            case R.id.txtXfermode:
+                startActivity(new Intent(this, XfermodeActivity.class));
         }
     }
 }

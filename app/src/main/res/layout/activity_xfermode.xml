@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/txtBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="图片交集"
+        android:gravity="center"
+        android:textColor="#ff6060"
+        android:visibility="visible"/>
+    <com.rfchina.internet.mytestapp.xfermode.DrawView
+        android:id="@+id/insertView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+         <ListView
+            android:id="@+id/list"
+            android:background="@drawable/w"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </com.rfchina.internet.mytestapp.xfermode.DrawView>
+
+    <com.rfchina.internet.mytestapp.xfermode.MinionsDraw
+        android:id="@+id/minion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.rfchina.internet.mytestapp.xfermode.WaveView
+        android:id="@+id/wave"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+</LinearLayout>

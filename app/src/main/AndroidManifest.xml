@@ -19,10 +19,13 @@
 
         <activity android:name=".cornerlayout.CornerActivity"/>
         <activity android:name=".activitystartmodel.FirstActivity"/>
-        <activity android:name=".activitystartmodel.SecondActivity" android:launchMode="standard"/>
+        <activity
+            android:name=".activitystartmodel.SecondActivity"
+            android:launchMode="standard"/>
         <activity android:name=".activitystartmodel.ThirdActivity"/>
 
         <activity android:name=".wheelView.ShowWheelActivity"/>
+        <activity android:name=".xfermode.XfermodeActivity"/>
     </application>
 
 </manifest>
