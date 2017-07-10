@@ -8,55 +8,19 @@
     >
 
     <TextView
-        android:id="@+id/txtCorner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
-        android:text="click to CornerActivity"
-        android:textSize="16dp"
-        android:background="#f9d55f"
-        android:layout_marginBottom="10dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="启动页"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#656565"
+        />
 
-    <TextView
-        android:id="@+id/txtStartMondel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
-        android:text="click to StartMondel"
-        android:textSize="16dp"
-        android:background="#f9d55f"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/txtWheelView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
-        android:text="click to WheelViewDemo"
-        android:textSize="16dp"
-        android:background="#f9d55f"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/txtXfermode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
-        android:text="click to XfermodeDemo"
-        android:textSize="16dp"
-        android:background="#f9d55f"
-        android:layout_marginBottom="10dp"/>
+    <ListView
+        android:id="@+id/listActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        ></ListView>
 
 </LinearLayout>
