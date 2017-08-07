@@ -11,10 +11,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 
 import com.rfchina.internet.mytestapp.R;
+import com.rfchina.internet.mytestapp.DimenUtil;
 
 /**
  * Created by luoyican on 2017/7/6.
@@ -51,7 +51,7 @@ public class WaveView extends View {
         dstRect = new Rect();
         srcRect = new Rect();
 
-        mSpeed = dip2px(context, WAVE_TRANS_SPEED);
+        mSpeed = DimenUtil.dip2px(context, WAVE_TRANS_SPEED);
         mDrawFilter = new PaintFlagsDrawFilter(Paint.ANTI_ALIAS_FLAG, Paint.DITHER_FLAG);
         postDelayed(new Runnable() {
             @Override
@@ -116,12 +116,6 @@ public class WaveView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         viewWidth = w;
         viewHeight = h;
-    }
-
-
-    public int dip2px(Context context, float dipValue) {
-        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dipValue, context.getResources().getDisplayMetrics()) + 0.5f);
-
     }
 
 }

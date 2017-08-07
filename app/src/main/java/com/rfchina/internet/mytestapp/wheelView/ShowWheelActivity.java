@@ -2,9 +2,11 @@ package com.rfchina.internet.mytestapp.wheelView;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.rfchina.internet.mytestapp.R;
 import com.rfchina.internet.wheelviewsdk.datepicker.entry.Contacts;
@@ -22,6 +24,8 @@ import java.util.Date;
 
 public class ShowWheelActivity extends Activity {
     private static final String TAG = "ShowWheelActivity";
+    private Handler mHandler = new Handler();
+    private int y, mon, d, h, mint, s;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,7 +61,7 @@ public class ShowWheelActivity extends Activity {
         showDateDialog(Contacts.FLAG_MODE_DATE_PICKER_YEAR_AND_MONTH_AND_DAY_AND_HOUR_AND_MINUTE_AND_SECOND);
     }
 
-    private void showDateDialog(int mod) {
+    private void showDateDialog(final int mod) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//小写的mm表示的是分钟
         String dstr = "2008-4-24 12:12:12";
         try {
@@ -73,6 +77,18 @@ public class ShowWheelActivity extends Activity {
                                     @Override
                                     public void choosedValue(int year, int month, int day, int hour, int minute, int second) {
                                         Log.d(TAG, "year " + year + " month " + month + " day " + day + " hour " + hour + " minute " + minute + " second " + second);
+                                        y = year;
+                                        mon = month;
+                                        d = day;
+                                        h = hour;
+                                        mint = minute;
+                                        s = second;
+                                        mHandler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Toast.makeText(ShowWheelActivity.this, "year " + y + " month " + mon + " day " + d + " hour " + h + " minute " + mint + " second " + s, Toast.LENGTH_LONG).show();
+                                            }
+                                        });
                                     }
                                 })
                         .setMaxDate(new Date())
@@ -92,6 +108,18 @@ public class ShowWheelActivity extends Activity {
                                     @Override
                                     public void choosedValue(int year, int month, int day, int hour, int minute, int second) {
                                         Log.d(TAG, "year " + year + " month " + month + " day " + day + " hour " + hour + " minute " + minute + " second " + second);
+                                        y = year;
+                                        mon = month;
+                                        d = day;
+                                        h = hour;
+                                        mint = minute;
+                                        s = second;
+                                        mHandler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Toast.makeText(ShowWheelActivity.this, "year " + y + " month " + mon + " day " + d + " hour " + h + " minute " + mint + " second " + s, Toast.LENGTH_LONG).show();
+                                            }
+                                        });
                                     }
                                 })
                         .setMaxDate(new Date())

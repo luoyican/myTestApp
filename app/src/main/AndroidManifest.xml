@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.rfchina.internet.mytestapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,6 +28,11 @@
 
         <activity android:name=".wheelView.ShowWheelActivity"/>
         <activity android:name=".xfermode.XfermodeActivity"/>
+        <activity android:name=".loadLargeImage.LargeImagerLoadActivity"/>
+        <activity android:name=".okhttpmodel.OkHttpTestActivity"/>
+        <activity android:name=".printer.PrinterActivity"/>
+        <activity android:name=".richtext.RichTextActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
     </application>
 
 </manifest>

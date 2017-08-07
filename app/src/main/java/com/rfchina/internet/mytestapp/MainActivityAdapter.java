@@ -45,7 +45,7 @@ public class MainActivityAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.txtActivityName.setText("click to " + getItem(position).toString());
+        viewHolder.txtActivityName.setText("click to " + getItem(position).getSimpleName().toString());
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
