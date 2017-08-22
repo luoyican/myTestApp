@@ -10,9 +10,12 @@ import android.widget.TextView;
 import com.rfchina.internet.mytestapp.activitystartmodel.FirstActivity;
 import com.rfchina.internet.mytestapp.cornerlayout.CornerActivity;
 import com.rfchina.internet.mytestapp.loadLargeImage.LargeImagerLoadActivity;
+import com.rfchina.internet.mytestapp.media.MediaActivity;
 import com.rfchina.internet.mytestapp.okhttpmodel.OkHttpTestActivity;
+import com.rfchina.internet.mytestapp.permission.PermissionActivity;
 import com.rfchina.internet.mytestapp.printer.PrinterActivity;
 import com.rfchina.internet.mytestapp.richtext.RichTextActivity;
+import com.rfchina.internet.mytestapp.service.ServiceActivity;
 import com.rfchina.internet.mytestapp.wheelView.ShowWheelActivity;
 import com.rfchina.internet.mytestapp.xfermode.XfermodeActivity;
 
@@ -24,7 +27,8 @@ public class MainActivity extends Activity {
 
     private List<Class> activities;
     private Class[] tmpAct = {CornerActivity.class, FirstActivity.class, ShowWheelActivity.class, XfermodeActivity.class,
-            LargeImagerLoadActivity.class, OkHttpTestActivity.class,PrinterActivity.class,RichTextActivity.class};
+            LargeImagerLoadActivity.class, OkHttpTestActivity.class, PrinterActivity.class, RichTextActivity.class, PermissionActivity.class,
+            MediaActivity.class,ServiceActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

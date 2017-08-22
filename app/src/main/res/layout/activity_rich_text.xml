@@ -21,12 +21,13 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/txtBtn"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:text="4e4434343"
+        android:text="点击拨打电话"
         android:textColor="@color/red"
         />
 

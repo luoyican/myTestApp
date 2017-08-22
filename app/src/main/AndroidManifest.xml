@@ -3,6 +3,8 @@
           package="com.rfchina.internet.mytestapp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -18,21 +20,45 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".cornerlayout.CornerActivity"/>
         <activity android:name=".activitystartmodel.FirstActivity"/>
         <activity
             android:name=".activitystartmodel.SecondActivity"
             android:launchMode="standard"/>
         <activity android:name=".activitystartmodel.ThirdActivity"/>
-
         <activity android:name=".wheelView.ShowWheelActivity"/>
         <activity android:name=".xfermode.XfermodeActivity"/>
         <activity android:name=".loadLargeImage.LargeImagerLoadActivity"/>
         <activity android:name=".okhttpmodel.OkHttpTestActivity"/>
         <activity android:name=".printer.PrinterActivity"/>
-        <activity android:name=".richtext.RichTextActivity"
+        <activity
+            android:name=".richtext.RichTextActivity"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name=".permission.PermissionActivity"/>
+        <activity android:name=".media.MediaActivity"/>
+        <activity android:name=".service.ServiceActivity"/>
+
+        <provider
+            android:name=".permission.MyContentProvider"
+            android:authorities="com.rfchina.internet.mytestapp.provider"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.rfchina.internet.mytestapp.media.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>
