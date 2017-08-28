@@ -13,7 +13,7 @@
         android:layout_margin="20dp"
         android:hint="输入下载链接"/>
 
-    <Button
+    <TextView
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,18 +22,20 @@
         android:text="start download"
         />
 
-    <Button
+    <TextView
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="pause"
         android:text="pause download"
+        android:textColor="@drawable/selector_text_color"
         />
 
-    <Button
+    <TextView
         android:id="@+id/button3"
         android:layout_width="wrap_content"
+        android:background="@drawable/selector_view_bg"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="cancel"
