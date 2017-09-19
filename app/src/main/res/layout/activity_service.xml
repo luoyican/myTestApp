@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="start"
+        android:clickable="true"
         android:text="start download"
         />
 
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="pause"
+        android:clickable="true"
         android:text="pause download"
         android:textColor="@drawable/selector_text_color"
         />
@@ -39,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="cancel"
+        android:clickable="true"
         android:text="cancel download"
         />
 

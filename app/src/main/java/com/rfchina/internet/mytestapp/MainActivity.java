@@ -1,13 +1,11 @@
 package com.rfchina.internet.mytestapp;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.rfchina.internet.mytestapp.activitystartmodel.FirstActivity;
+import com.rfchina.internet.mytestapp.aliRecognition.AliRecognitionActivity;
 import com.rfchina.internet.mytestapp.cornerlayout.CornerActivity;
 import com.rfchina.internet.mytestapp.loadLargeImage.LargeImagerLoadActivity;
 import com.rfchina.internet.mytestapp.media.MediaActivity;
@@ -29,7 +27,7 @@ public class MainActivity extends Activity {
     private List<Class> activities;
     private Class[] tmpAct = {TestActivity.class, CornerActivity.class, FirstActivity.class, ShowWheelActivity.class, XfermodeActivity.class,
             LargeImagerLoadActivity.class, OkHttpTestActivity.class, PrinterActivity.class, RichTextActivity.class, PermissionActivity.class,
-            MediaActivity.class, ServiceActivity.class};
+            MediaActivity.class, ServiceActivity.class, AliRecognitionActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
