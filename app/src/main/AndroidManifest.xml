@@ -5,7 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:process=":release">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -22,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".cornerlayout.CornerActivity"/>
-        <activity android:name=".activitystartmodel.FirstActivity"/>
+        <activity android:name=".activitystartmodel.FirstActivity"
+            android:process="com.debug"/>
         <activity
             android:name=".activitystartmodel.SecondActivity"
             android:launchMode="standard"/>
@@ -40,6 +44,7 @@
         <activity android:name=".service.ServiceActivity"/>
         <activity android:name=".test.TestActivity"/>
         <activity android:name=".aliRecognition.AliRecognitionActivity"/>
+        <activity android:name=".mqtt.MQTTActivity"/>
 
         <provider
             android:name=".permission.MyContentProvider"
@@ -60,8 +65,10 @@
         <service
             android:name=".service.DownloadService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"/>
+        <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service android:name=".mqtt.MQTTService"/>
     </application>
 
 </manifest>
