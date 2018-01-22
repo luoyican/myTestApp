@@ -3,6 +3,7 @@ package com.rfchina.internet.mytestapp.activitystartmodel;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -14,14 +15,16 @@ import com.rfchina.internet.mytestapp.R;
  * Created by luoyican on 2017/6/22.
  */
 
-public class SecondActivity extends Activity {
+public class SecondActivity extends FirstActivity {
     private static final String TAG = "SecondActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_model_second);
-        Log.d(TAG, "onCreate: ");
+        Log.d("IPCHelper.testNum", "" + IPCHelper.testNum);
+//        Log.d(TAG, "onCreate: ");
+//        printName(TAG);
     }
 
     public void onClick(View view){
@@ -56,5 +59,13 @@ public class SecondActivity extends Activity {
         Intent intent = new Intent(context, SecondActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         context.startActivity(intent);
+    }
+
+
+    @Override
+    protected void printName(String s) {
+//        this.printName(s);//内存溢出
+//        super.printName(s);
+        Log.d("DFDFDF",TAG);
     }
 }

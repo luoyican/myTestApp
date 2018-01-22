@@ -9,19 +9,22 @@ import android.util.Log;
 import android.view.View;
 
 import com.rfchina.internet.mytestapp.R;
+import com.rfchina.internet.rfinterface.RFInterface;
 
 /**
  * Created by luoyican on 2017/6/22.
  */
 
-public class FirstActivity extends Activity{
+public class FirstActivity extends Activity implements RFInterface {
     private static final String TAG = "FirstActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_model_first);
-        Log.d(TAG, "onCreate: ");
+        Log.d(TAG, "onCreate: " + IPCHelper.testNum);
+        Log.d("IPCHelper.testNum", "" + IPCHelper.testNum);
+        this.printName(TAG);
     }
 
     @Override
@@ -29,7 +32,8 @@ public class FirstActivity extends Activity{
         super.onStart();
         Log.d(TAG, "onStart: ");
     }
-    public void onClick(View view){
+
+    public void onClick(View view) {
         SecondActivity.entryActivity(this);
     }
 
@@ -55,5 +59,34 @@ public class FirstActivity extends Activity{
     public static void entryActivity(Context context) {
         Intent intent = new Intent(context, FirstActivity.class);
         context.startActivity(intent);
+    }
+
+    protected void printName(String s) {
+        Log.d("DFDFDF", s);
+    }
+
+    @Override
+    public String RFN_CheckLogin() {
+        return null;
+    }
+
+    @Override
+    public void RFN_LoginReqAndCallBackFunName(String s) {
+
+    }
+
+    @Override
+    public void RFN_SSOInfoAndCallBackFunName(String s, String s1) {
+
+    }
+
+    @Override
+    public void RFN_CloseWebView() {
+
+    }
+
+    @Override
+    public void RFN_WebShareWithDataAndCallBackFunName(String shareData, String jsFuncName) {
+
     }
 }

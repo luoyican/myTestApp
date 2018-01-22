@@ -1,7 +1,5 @@
 package com.rfchina.internet.mytestapp.activitystartmodel;
 
-import android.app.Activity;
-import android.app.usage.ConfigurationStats;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +10,7 @@ import android.util.Log;
  * Created by luoyican on 2017/6/22.
  */
 
-public class ThirdActivity extends Activity {
+public class ThirdActivity extends FirstActivity {
     private static final String TAG = "ThirdActivity";
 
     @Override
