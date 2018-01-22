@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="wifi连接信息:"
+        android:textColor="@color/app_blue"
+        android:textSize="14dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_99"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="wifi名："
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/edtWifiName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="输入要连接wifi，默认rf_35"
+            android:textColorHint="@color/gray_33"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_99"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="wifi密码："
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/edtWifiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="请输入wifi密码,默认为空"
+            android:inputType="textPassword"
+            android:textColorHint="@color/gray_33"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="wifi验证信息:"
+        android:textColor="@color/app_blue"
+        android:textSize="14dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_99"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="用户名："
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="请输入用户名，默认luoyican"
+            android:textColorHint="@color/gray_33"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_99"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="用户密码："
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/edtUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="请输入用户密码"
+            android:inputType="textPassword"
+            android:textColorHint="@color/gray_33"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtConnect"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@color/app_blue_darken"
+        android:gravity="center"
+        android:text="连  接"
+        android:textColor="@color/normalRed"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="wifi连接状态:"
+        android:textColor="@color/app_blue"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/txtWifiState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text=""
+        android:textColor="@color/red"
+        android:textSize="20dp"/>
+</LinearLayout>

@@ -12,8 +12,10 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -51,7 +53,7 @@
         <activity android:name=".test.TestActivity"/>
         <activity android:name=".aliRecognition.AliRecognitionActivity"/>
         <activity android:name=".mqtt.MQTTActivity"/>
-        <activity android:name=".wifiautoverification.WifiAutoVerification"/>
+        <activity android:name=".wifiautoverification.WifiAutoVerificationActivity"/>
         <activity android:name=".subandgrouppackage.SubAndGroupPackageActivity"/>
 
         <provider
@@ -77,6 +79,13 @@
         <!-- Mqtt Service -->
         <service android:name="org.eclipse.paho.android.service.MqttService"/>
         <service android:name=".mqtt.MQTTService"/>
+
+        <receiver android:name=".wifiautoverification.WifiBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
