@@ -25,6 +25,7 @@ public class FirstActivity extends Activity implements RFInterface {
         Log.d(TAG, "onCreate: " + IPCHelper.testNum);
         Log.d("IPCHelper.testNum", "" + IPCHelper.testNum);
         this.printName(TAG);
+//        this.RFN_LoginReqAndCallBackFunName("dd11111111");
     }
 
     @Override
@@ -62,7 +63,8 @@ public class FirstActivity extends Activity implements RFInterface {
     }
 
     protected void printName(String s) {
-        Log.d("DFDFDF", s);
+        Log.d("DDDDDDDDDprintName", s);
+        RFN_LoginReqAndCallBackFunName("dd11111111");
     }
 
     @Override
@@ -72,7 +74,8 @@ public class FirstActivity extends Activity implements RFInterface {
 
     @Override
     public void RFN_LoginReqAndCallBackFunName(String s) {
-
+        Log.d("DDDDDDDDD", s);
+        Log.d("DDDDDDDDD", "FirstActivity1111111111");
     }
 
     @Override

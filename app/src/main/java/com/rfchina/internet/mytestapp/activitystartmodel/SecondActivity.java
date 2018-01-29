@@ -28,7 +28,7 @@ public class SecondActivity extends FirstActivity {
     }
 
     public void onClick(View view){
-        FirstActivity.entryActivity(this);
+        ThirdActivity.entryActivity(this);
     }
 
     @Override
@@ -57,15 +57,22 @@ public class SecondActivity extends FirstActivity {
 
     public static void entryActivity(Context context) {
         Intent intent = new Intent(context, SecondActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         context.startActivity(intent);
     }
 
 
     @Override
     protected void printName(String s) {
-//        this.printName(s);//内存溢出
+//        this.printName(s);//死循环，内存溢出
 //        super.printName(s);
-        Log.d("DFDFDF",TAG);
+        Log.d("DDDDDDDDDprintName2",s);
+        this.RFN_LoginReqAndCallBackFunName("dd");
+    }
+
+    @Override
+    public void RFN_LoginReqAndCallBackFunName(String s) {
+        Log.d("DDDDDDDDD", "SecondActivity22222222");
+        super.RFN_LoginReqAndCallBackFunName(s);
     }
 }

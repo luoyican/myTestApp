@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
+
+import com.rfchina.internet.mytestapp.R;
 
 /**
  * Created by luoyican on 2017/6/22.
@@ -16,7 +19,19 @@ public class ThirdActivity extends FirstActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start_model_first);
         Log.d(TAG, "onCreate: ");
+//        this.RFN_LoginReqAndCallBackFunName("dd");
+    }
+
+    public void onClick(View view){
+        SecondActivity.entryActivity(this);
+    }
+
+    @Override
+    public void RFN_LoginReqAndCallBackFunName(String s) {
+//        super.RFN_LoginReqAndCallBackFunName(s);
+        Log.d("DDDDDDDDD", "ThirdActivityeeeeeee");
     }
 
     @Override

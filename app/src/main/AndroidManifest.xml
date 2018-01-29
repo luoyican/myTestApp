@@ -23,8 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:process=":release">
+            android:name=".MainActivity">
+            <!--android:process=":release">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -34,7 +34,7 @@
         <activity android:name=".cornerlayout.CornerActivity"/>
         <activity
             android:name=".activitystartmodel.FirstActivity"
-            android:process="com.debug"/>
+            />
         <activity
             android:name=".activitystartmodel.SecondActivity"
             android:launchMode="standard"/>
