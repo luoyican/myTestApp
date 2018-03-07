@@ -45,4 +45,5 @@ dependencies {
     compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
     compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.0'
     compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
 }
