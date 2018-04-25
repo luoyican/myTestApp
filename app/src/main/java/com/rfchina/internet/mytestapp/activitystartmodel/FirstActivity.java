@@ -7,9 +7,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
 
 import com.rfchina.internet.mytestapp.R;
 import com.rfchina.internet.rfinterface.RFInterface;
+
+import java.math.BigInteger;
 
 /**
  * Created by luoyican on 2017/6/22.
@@ -17,6 +21,8 @@ import com.rfchina.internet.rfinterface.RFInterface;
 
 public class FirstActivity extends Activity implements RFInterface {
     private static final String TAG = "FirstActivity";
+    private String msg = "11112232富力东山新天地已退出全新楼盘，平层户型为89-148平四房，带装修均价3万，周围设施便利社区配置高档，服务全面富力东山新天地已退出全新楼盘，平层户型为89-148平四房，带装修均价3万，周围设施便利社区配置高档，服务全面;11112232富力东山新天地已退出全新楼盘，平层户型为89-148平四房，带装修均价3万，周围设施便利社区配置高档，服务全面富力东山新天地已退出全新楼盘，平层户型为89-148平四房，带装修均价3万，周围设施便利社区配置高档，服务全面\"";
+    private ExpandTextView mTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +31,7 @@ public class FirstActivity extends Activity implements RFInterface {
         Log.d(TAG, "onCreate: " + IPCHelper.testNum);
         Log.d("IPCHelper.testNum", "" + IPCHelper.testNum);
         this.printName(TAG);
+        mTextView = (ExpandTextView) findViewById(R.id.txtBuildIntroduction);
 //        this.RFN_LoginReqAndCallBackFunName("dd11111111");
     }
 
@@ -35,7 +42,9 @@ public class FirstActivity extends Activity implements RFInterface {
     }
 
     public void onClick(View view) {
-        SecondActivity.entryActivity(this);
+      long b = 0b10000000000000000000000000000000;
+        mTextView.setText(" " + b);
+//        SecondActivity.entryActivity(this);
     }
 
 

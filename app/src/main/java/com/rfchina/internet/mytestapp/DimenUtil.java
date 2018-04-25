@@ -9,6 +9,10 @@ import android.util.TypedValue;
  */
 
 public class DimenUtil {
+    public static int dip2px(float dipValue) {
+        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dipValue, MyApplication.context.getResources().getDisplayMetrics()) + 0.5f);
+
+    }
     public static int dip2px(Context context, float dipValue) {
         return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dipValue, context.getResources().getDisplayMetrics()) + 0.5f);
     }

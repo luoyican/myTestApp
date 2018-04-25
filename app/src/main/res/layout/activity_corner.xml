@@ -16,16 +16,20 @@
         android:background="#00555555"
         rect_adius = "300"
         >
-
-        <ListView
-            android:id="@+id/list"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_mine_agent_ad_default"
+            android:scaleType="fitXY"/>
+        <!--<ListView-->
+            <!--android:id="@+id/list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"></ListView>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="This is CornerLayout"/>
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:text="This is CornerLayout"/>-->
     </com.rfchina.internet.mytestapp.cornerlayout.CornerLayout>
 
     <android.support.v7.widget.CardView
@@ -34,15 +38,11 @@
         android:layout_height="400dp"
         app:cardCornerRadius="10dp">
 
-        <ListView
-            android:id="@+id/list2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="This is CardView"/>
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:src="@drawable/pic_mine_agent_ad_default"
+           android:scaleType="fitXY"/>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

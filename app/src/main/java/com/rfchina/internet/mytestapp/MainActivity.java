@@ -99,6 +99,7 @@ import com.rfchina.internet.mytestapp.listview.ListviewActivity;
 import com.rfchina.internet.mytestapp.loadLargeImage.LargeImagerLoadActivity;
 import com.rfchina.internet.mytestapp.media.MediaActivity;
 import com.rfchina.internet.mytestapp.mqtt.MQTTActivity;
+import com.rfchina.internet.mytestapp.nestedscrolling.NestedScrollingActivity;
 import com.rfchina.internet.mytestapp.okhttpmodel.OkHttpTestActivity;
 import com.rfchina.internet.mytestapp.permission.PermissionActivity;
 import com.rfchina.internet.mytestapp.printer.PrinterActivity;
@@ -122,7 +123,7 @@ public class MainActivity extends Activity {
     private Class[] tmpAct = {TestActivity.class, CornerActivity.class, FirstActivity.class, ShowWheelActivity.class, XfermodeActivity.class,
             LargeImagerLoadActivity.class, OkHttpTestActivity.class, PrinterActivity.class, RichTextActivity.class, PermissionActivity.class,
             MediaActivity.class, ServiceActivity.class, AliRecognitionActivity.class, MQTTActivity.class, SubAndGroupPackageActivity.class,
-            WifiAutoVerificationActivity.class, TCPCLientActivity.class, ListviewActivity.class};
+            WifiAutoVerificationActivity.class, TCPCLientActivity.class, ListviewActivity.class,NestedScrollingActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,11 +19,11 @@ public class CornerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_corner);
 
-        ListView list = (ListView) findViewById(R.id.list);
-        list.setAdapter(new CornerAdapter(initDatas()));
+//        ListView list = (ListView) findViewById(R.id.list);
+//        list.setAdapter(new CornerAdapter(initDatas()));
 
-        ListView list2 = (ListView) findViewById(R.id.list2);
-        list2.setAdapter(new CornerAdapter(initDatas()));
+//        ListView list2 = (ListView) findViewById(R.id.list2);
+//        list2.setAdapter(new CornerAdapter(initDatas()));
 
     }
 

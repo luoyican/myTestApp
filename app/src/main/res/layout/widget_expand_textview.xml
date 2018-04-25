@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtMsg"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/normalGray"
+            android:textSize="14dp"
+            />
+
+    <LinearLayout
+        android:id="@+id/viewMore"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:paddingTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#959595"
+            android:textSize="14dp"
+            />
+
+        <TextView
+            android:id="@+id/txtMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/selector_build_detail_more_bg"
+            android:gravity="center"
+            android:text="展开"
+            android:textColor="#959595"
+            android:textSize="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            />
+    </LinearLayout>
+</LinearLayout>

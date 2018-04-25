@@ -37,7 +37,7 @@
             />
         <activity
             android:name=".activitystartmodel.SecondActivity"
-            android:launchMode="standard"/>
+            android:launchMode="singleInstance"/>
         <activity android:name=".activitystartmodel.ThirdActivity"/>
         <activity android:name=".wheelView.ShowWheelActivity"/>
         <activity android:name=".xfermode.XfermodeActivity"/>
@@ -57,6 +57,7 @@
         <activity android:name=".subandgrouppackage.SubAndGroupPackageActivity"/>
         <activity android:name=".socket.TCPCLientActivity"/>
         <activity android:name=".listview.ListviewActivity"/>
+        <activity android:name=".nestedscrolling.NestedScrollingActivity"/>
 
         <provider
             android:name=".permission.MyContentProvider"

@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="this is first activity"
-        android:layout_marginBottom="10dp"/>
+        android:text="this is first activity"/>
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ff606000"
-        android:text="Button"
         android:clickable="true"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:text="Button"/>
+
+    <com.rfchina.internet.mytestapp.activitystartmodel.ExpandTextView
+        android:id="@+id/txtBuildIntroduction"
+        lines="3"
+        textSizeWithDP="14"
+        textColor="@color/red"
+        texts="富力东山新天地已退出全新楼盘，平层户型为89-148平四房，带装修均价3万，周围设施便利社区配置高档，服务全面富力东山新天地已退出全新楼盘，平层户型为89-148平四房，带装修均价3万，周围设施便利社区配置高档，服务全面"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
 </LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.rfchina.internet.mytestapp.nestedscrolling.MyNestedScrollingParent
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="测试嵌套滑动"
+            android:textColor="#ff6060"
+            android:textSize="40dp"/>
+
+        <com.rfchina.internet.mytestapp.nestedscrolling.MyNestedScrollingChild
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/app_blue"
+                android:textSize="40dp"
+                android:text="q\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n"/>
+        </com.rfchina.internet.mytestapp.nestedscrolling.MyNestedScrollingChild>
+    </com.rfchina.internet.mytestapp.nestedscrolling.MyNestedScrollingParent>
+</LinearLayout>
