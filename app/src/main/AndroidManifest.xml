@@ -58,6 +58,7 @@
         <activity android:name=".socket.TCPCLientActivity"/>
         <activity android:name=".listview.ListviewActivity"/>
         <activity android:name=".nestedscrolling.NestedScrollingActivity"/>
+        <activity android:name=".webviewTest.WebViewActivity"/>
 
         <provider
             android:name=".permission.MyContentProvider"
