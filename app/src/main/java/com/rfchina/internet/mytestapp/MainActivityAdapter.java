@@ -2,10 +2,13 @@ package com.rfchina.internet.mytestapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.rfchina.internet.jnilibs.SignHelper;
 
 import java.util.List;
 
@@ -51,6 +54,9 @@ public class MainActivityAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Intent intent = new Intent(parent.getContext(), getItem(position));
                 parent.getContext().startActivity(intent);
+                Log.e("ddddddddddddddddddd", "dev:" + SignHelper.getSecretKey(parent.getContext(), "dev") + "\n" + "test:" + SignHelper.getSecretKey(parent.getContext(), "test")
+                        + "\n" + "pre:" + SignHelper.getSecretKey(parent.getContext(), "pre") + "\n" + "final:" + SignHelper.getSecretKey(parent.getContext(), "final"));
+
             }
         });
         return convertView;

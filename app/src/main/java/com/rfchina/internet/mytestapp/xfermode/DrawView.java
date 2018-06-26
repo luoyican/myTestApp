@@ -53,24 +53,14 @@ public class DrawView extends FrameLayout {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
     }
-    @Override
+    @Override//绘制子view时会调用
     protected void dispatchDraw(Canvas canvas) {
         canvas.saveLayerAlpha(0, 0, mRect.width(), mRect.height(), 255, Canvas.ALL_SAVE_FLAG);
         super.dispatchDraw(canvas);
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP));
         canvas.drawBitmap(dst, mRect, mRect, mPaint);
 //        np.draw(canvas, mRect,mPaint);
 
-//        canvas.save();
-//        mPaint.setColor(Color.BLACK);
-//        mPaint.setStyle(Paint.Style.FILL);
-//        Path path2 = new Path();
-//        path2.moveTo(20, 930);
-//        path2.lineTo(930, 930);
-//        path2.lineTo(930, 20);
-//        path2.close();
-//        canvas.drawPath(path2, mPaint);
-//        canvas.restore();
         canvas.restore();
     }
 
