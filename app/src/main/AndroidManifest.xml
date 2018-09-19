@@ -59,6 +59,9 @@
         <activity android:name=".listview.ListviewActivity"/>
         <activity android:name=".nestedscrolling.NestedScrollingActivity"/>
         <activity android:name=".webviewTest.WebViewActivity"/>
+        <activity android:name=".http.HttpActivity"/>
+        <activity android:name=".read.ReadActivity"/>
+        <activity android:name=".colorChange.ColorChangeActivity"/>
 
         <provider
             android:name=".permission.MyContentProvider"

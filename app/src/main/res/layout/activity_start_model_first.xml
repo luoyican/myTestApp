@@ -18,7 +18,7 @@
         android:background="#ff606000"
         android:clickable="true"
         android:onClick="onClick"
-        android:text="Button"/>
+        android:text="Button View"/>
 
     <com.rfchina.internet.mytestapp.activitystartmodel.ExpandTextView
         android:id="@+id/txtBuildIntroduction"

@@ -94,6 +94,23 @@ public class OkHttpTestActivity extends Activity {
         });
     }
 
+    public void getR(){
+                OkHttpClient okHttpClient = new OkHttpClient();
+                try {
+                    Request request = new Request.Builder()
+                            .url("http://test.smartshop.rfmember.net/api/citys?type=1")
+                            .build();
+                    Response response = okHttpClient.newCall(request).execute();
+                    if (response.isSuccessful()) {
+                        Log.d("wwwwwwww", "getR: "+new String(response.body().bytes()));//要在返回的结果里用服务器的编码方式解码，不然乱码
+                    } else {
+                        Log.d("wwwwwwww", "getR: "+"ddddddddd");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+    }
+
     private void getRespone(String url) {
         OkHttpClient okHttpClient = new OkHttpClient();
         try {

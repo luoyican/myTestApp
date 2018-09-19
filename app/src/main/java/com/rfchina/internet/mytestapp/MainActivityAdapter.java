@@ -54,8 +54,8 @@ public class MainActivityAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Intent intent = new Intent(parent.getContext(), getItem(position));
                 parent.getContext().startActivity(intent);
-                Log.e("ddddddddddddddddddd", "dev:" + SignHelper.getSecretKey(parent.getContext(), "dev") + "\n" + "test:" + SignHelper.getSecretKey(parent.getContext(), "test")
-                        + "\n" + "pre:" + SignHelper.getSecretKey(parent.getContext(), "pre") + "\n" + "final:" + SignHelper.getSecretKey(parent.getContext(), "final"));
+//                Log.e("ddddddddddddddddddd", "dev:" + SignHelper.getSecretKey(parent.getContext(), "dev") + "\n" + "test:" + SignHelper.getSecretKey(parent.getContext(), "test")
+//                        + "\n" + "pre:" + SignHelper.getSecretKey(parent.getContext(), "pre") + "\n" + "final:" + SignHelper.getSecretKey(parent.getContext(), "final"));
 
             }
         });
